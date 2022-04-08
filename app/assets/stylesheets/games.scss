@@ -1,0 +1,29 @@
+body {
+  font-size: 2rem;
+  text-shadow: 2px black;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+}
+
+li {
+  list-style: none;
+  margin: 24px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 8px black;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #3498DB;
+  color: white;
+  width: 16px;
+  height: 16px;
+
+}
