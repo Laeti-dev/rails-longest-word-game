@@ -7,23 +7,22 @@ h1 {
   text-align: center;
 }
 
-ul {
+.letters-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: auto;
 }
 
-li {
-  list-style: none;
-  margin: 24px;
-  border: 1px solid black;
-  box-shadow: 2px 2px 8px black;
+.letter-box {
+  width: 62px;
+  height: 62px;
+  background-color: #E2F2DC;
+  color: #51913D;
+  box-shadow: 2px 2px 8px #51913D;
+  border: 1px solid #51913d;
   border-radius: 4px;
-  padding: 16px;
-  background-color: #3498DB;
-  color: white;
-  width: 16px;
-  height: 16px;
-
+  text-align: center;
+  font-size: 40px;
+  margin: 16px;
 }
