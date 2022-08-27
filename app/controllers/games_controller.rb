@@ -25,7 +25,7 @@ class GamesController < ApplicationController
 
     @length = @user_input.length
 
-    return @message = "Sorry, #{@user_input} can't be build out of #{@letters}" unless check_input(@user_input, @letters)
+    return @message = "Sorry, #{@user_input} can't be build out of #{@letters.join(", ")}" unless check_input(@user_input, @letters)
     if api_results['found']
       @message =  "Well done! #{@user_input} is a valid English word! You earn #{@length} points"
       session[:score] = calculate_points(@length)
@@ -46,7 +46,7 @@ class GamesController < ApplicationController
 
     input.each do |letter|
       return false unless array.include?(letter)
-      # array.delete_at(array.index(letter))
+      array.delete_at(array.index(letter))
     end
     true
   end
@@ -64,6 +64,9 @@ class GamesController < ApplicationController
       session[:score] = @length
     else
       return session[:score]
+      total_score
     end
+
   end
+
 end
