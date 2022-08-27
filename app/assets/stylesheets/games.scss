@@ -26,3 +26,21 @@ h1 {
   font-size: 40px;
   margin: 16px;
 }
+
+.word-input {
+  height: 32px;
+  width: 50%;
+  font-size: 24px;
+}
+
+.btn {
+  width: 10%;
+  height: 48px;
+  margin-left: 16px;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

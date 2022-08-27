@@ -8,9 +8,9 @@
 
 
 <p>Enter your word: </p>
-<form action='/score' method='post'>
-  <input type='text' name='answer'>
-  <input type="submit" value="Play!">
+<form action='/score' method='post' data-turbo='false'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%# add a hidden input field with an authenticity_token that ensures the POST request is coming from your website and not from another. %>
+  <input type='text' name='answer' placeholder='Your word' autocomplete='off' class='word-input'>
+  <input type="submit" value="Play!" class='btn'>
 </form>
-
-<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
