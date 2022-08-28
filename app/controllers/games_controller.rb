@@ -26,7 +26,7 @@ class GamesController < ApplicationController
     @length = @user_input.length
 
     return @message = "Sorry, #{@user_input} can't be build out of #{@letters.join(", ")}" unless check_input(@user_input, @letters)
-    if api_results['found']
+    if api_results['found'] && @user_input.length > 1
       @message =  "Well done! #{@user_input} is a valid English word! You earn #{@length} points"
       session[:score] = calculate_points(@length)
     else
