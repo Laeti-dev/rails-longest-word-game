@@ -15,6 +15,7 @@ class GamesController < ApplicationController
     4.times do
       @letters << vowels[rand(5)]
     end
+    @letters.shuffle!
   end
 
   def score
