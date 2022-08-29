@@ -43,4 +43,16 @@ class GamesTest < ApplicationSystemTestCase
     assert_current_path score_path
     assert_text "Sorry, #{letter} is not an English word"
   end
+
+  # test "fill the form with a valid English word, click play and get a “Congratulations” message" do
+  #   visit new_url
+  #   letters = []
+  #   all('div.letter-box').each do |box|
+  #     letters << box.text
+  #   end
+  #   fill_in 'word', with: "real"
+  #   click_on 'Play!'
+
+  #   assert_text "Well done! REAL is a valid English word!"
+  # end
 end
